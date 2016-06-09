@@ -1,5 +1,10 @@
+<div align="center">
+<img width="172" height="61" src="http://www.amoad.com/images/logo.png">
+</div>
+
 # AMoAd Unity Plugin Demo
-## デモアプリの使用方法
+
+## Introduction
 * デモ画面に遷移してsidを入力すると広告の表示ができます。
 * 広告種類ことにデモ画面が用意されています。
   * ディスプレイ広告(Display AD)
@@ -14,6 +19,18 @@
 </div>
 
 
-## デモアプリの起動方法
-- iOS:準備中...
-- Android:準備中...
+## Requirements
+
+Unity4.x or later
+>デモアプリはUnity5.3.1f1で動作確認ずみです。
+
+## DemoApp download
+
+[ZIPをダウンロード](https://github.com/amoad/amoad-unity-plugin/archive/master.zip)
+
+## Project Settings
+
+UnityでExportしたiOSまたは、AndroidプロジェクトにAMoAdSdkを設定する。
+詳細内容は[Wiki](https://github.com/amoad/amoad-unity-plugin/wiki)をご参考してください。
+
+

@@ -3,13 +3,16 @@ using System.Collections;
 
 public class MainSceneHandler : MonoBehaviour {
 
-    public void GoToDisplayScene(){
-        Application.LoadLevel ("DisplayScene");
+    public void GoToFormSceneForDisplay(){
+        Bundle.GetInstance().SetAdType("display");
+        Application.LoadLevel ("FormScene");
     }
-    public void GoToInterstitialScene(){
-        Application.LoadLevel ("InterstitialScene");
+    public void GoToFormSceneForInterstitial(){
+        Bundle.GetInstance().SetAdType("interstitial");
+        Application.LoadLevel ("FormScene");
     }
-    public void GoToNativeHtmlScene(){
-        Application.LoadLevel ("NativeHtmlScene");
+    public void GoToFormSceneForNativeHtml(){
+        Bundle.GetInstance().SetAdType("nativehtml");
+        Application.LoadLevel ("FormScene");
     }
 }

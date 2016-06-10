@@ -13,6 +13,7 @@
 
 <div>
 	<img src="/Images/MainScene.png" width=160 alt="Main画面">
+  <img src="/Images/FormScene.png" width=160 alt="sid入力画面">
 	<img src="/Images/DisplayScene.png" width=160 alt="デモ画面１">
 	<img src="/Images/InterstitialScene.png" width=160 alt="デモ画面２">
 	<img src="/Images/NativeHtmlScene.png" width=160 alt="デモ画面３">
@@ -32,5 +33,3 @@ Unity4.x or later
 
 UnityでExportしたiOSまたは、AndroidプロジェクトにAMoAdSdkを設定する。
 詳細内容は[Wiki](https://github.com/amoad/amoad-unity-plugin/wiki)をご参考してください。
-
-

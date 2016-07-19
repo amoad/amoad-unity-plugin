@@ -10,6 +10,7 @@ public class DisplaySceneHandler : MonoBehaviour {
     }
 
     public void Register(){
+        #if UNITY_IOS
         AMoAdUnityPlugin.Register (
             sid:sid,
             bannerSize:AMoAdUnityPlugin.BannerSize.B320x50 /* 320dpi x 50dpi */,
@@ -18,8 +19,20 @@ public class DisplaySceneHandler : MonoBehaviour {
             adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
             rotateTrans:AMoAdUnityPlugin.RotateTransition.None,
             clickTrans:AMoAdUnityPlugin.ClickTransition.None,
-            imageName:"banner.gif"
+            imageName:"banner@2x.png"
         );
+        #elif UNITY_ANDROID
+        AMoAdUnityPlugin.Register (
+            sid:sid,
+            bannerSize:AMoAdUnityPlugin.BannerSize.B320x50 /* 320dpi x 50dpi */,
+            hAlign:AMoAdUnityPlugin.HorizontalAlign.Center,
+            vAlign:AMoAdUnityPlugin.VerticalAlign.Bottom,
+            adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
+            rotateTrans:AMoAdUnityPlugin.RotateTransition.None,
+            clickTrans:AMoAdUnityPlugin.ClickTransition.None,
+            imageName:"banner.png"
+        );
+        #endif
     }
     public void Unregister(){
         AMoAdUnityPlugin.Unregister (sid);

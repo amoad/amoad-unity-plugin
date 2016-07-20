@@ -78,10 +78,6 @@ static AMoAdView *find_amoad_view(NSString *sid) {
 
 #pragma mark - Implements
 
-@interface AMoAdView(AMoAdUnityPlugin)
-- (instancetype)initWithBannerSize:(AMoAdBannerSize)bannerSize hAlign:(AMoAdHorizontalAlign)hAlign vAlign:(AMoAdVerticalAlign)vAlign adjustMode:(AMoAdAdjustMode)adjustMode x:(CGFloat)x y:(CGFloat)y delegate:(id)delegate;
-@end
-
 void amoad_show(const char *cSid,
                    int bannerSize,
                    int hAlign,
@@ -100,20 +96,27 @@ void amoad_show(const char *cSid,
   if (amoadView) {
     [amoadView show];
   } else {
-    amoadView = [[AMoAdView alloc] initWithBannerSize:(AMoAdBannerSize)bannerSize hAlign:(AMoAdHorizontalAlign)hAlign vAlign:(AMoAdVerticalAlign)vAlign adjustMode:(AMoAdAdjustMode)adjustMode x:(CGFloat)x y:(CGFloat)y delegate:nil];
-
-    amoadView.networkTimeoutMillis = timeoutMillis;
-
     if (cImageName) {
       NSString *imageName = string_with_cstring(cImageName);
-      amoadView.image = [UIImage imageNamed:imageName];
+      amoadView = [[AMoAdView alloc] initWithImage:[UIImage imageNamed:imageName]
+                                        adjustMode:(AMoAdAdjustMode)adjustMode];
+    } else {
+      amoadView = [[AMoAdView alloc] initWithFrame:CGRectMake((CGFloat)x, (CGFloat)y, 0.0, 0.0)];
+      amoadView.adjustMode = (AMoAdAdjustMode)adjustMode;
     }
-    amoadView.rotateTransition = AMoAdRotateTransition(rotateTrans);
-    amoadView.clickTransition = AMoAdClickTransition(clickTrans);
+    if (amoadView) {
+      amoadView.horizontalAlign = (AMoAdHorizontalAlign)hAlign;
+      amoadView.verticalAlign   = (AMoAdVerticalAlign)vAlign;
 
-    amoadView.sid = sid;
+      amoadView.networkTimeoutMillis = timeoutMillis;
 
-    [get_view_controller().view addSubview:amoadView];
+      amoadView.rotateTransition  = AMoAdRotateTransition(rotateTrans);
+      amoadView.clickTransition   = AMoAdClickTransition(clickTrans);
+
+      amoadView.sid = sid;
+
+      [get_view_controller().view addSubview:amoadView];
+    }
   }
 }
 

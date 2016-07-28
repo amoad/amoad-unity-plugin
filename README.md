@@ -30,5 +30,5 @@ Unity4.x or later
 
 ## その他
 - [AMoAd iOS SDK](https://github.com/amoad/amoad-ios-sdk)
-- [AMoAd Unity Plugin](https://github.com/amoad/amoad-android-sdk)
+- [AMoAd Android SDK](https://github.com/amoad/amoad-android-sdk)
 - [AMoAd Cocos2d-x Module](https://github.com/amoad/amoad-cocos2dx-module)

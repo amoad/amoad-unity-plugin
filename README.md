@@ -16,7 +16,7 @@
 
 <div>
 	<img src="/Images/MainScene.png" width=160 alt="Main画面">
-  <img src="/Images/FormScene.png" width=160 alt="sid入力画面">
+	<img src="/Images/FormScene.png" width=160 alt="sid入力画面">
 	<img src="/Images/DisplayScene.png" width=160 alt="デモ画面１">
 	<img src="/Images/InterstitialScene.png" width=160 alt="デモ画面２">
 	<img src="/Images/NativeHtmlScene.png" width=160 alt="デモ画面３">
@@ -27,3 +27,8 @@
 
 Unity4.x or later
 > デモアプリはUnity5.3.1f1で動作確認ずみです。
+
+## その他
+- [AMoAd iOS SDK](https://github.com/amoad/amoad-ios-sdk)
+- [AMoAd Unity Plugin](https://github.com/amoad/amoad-android-sdk)
+- [AMoAd Cocos2d-x Module](https://github.com/amoad/amoad-cocos2dx-module)

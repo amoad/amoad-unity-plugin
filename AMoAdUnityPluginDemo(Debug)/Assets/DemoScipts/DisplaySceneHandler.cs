@@ -9,16 +9,27 @@ public class DisplaySceneHandler : FormHandler, IExitHandler {
     }
 
     public void Register(){
+        #if UNITY_IOS
         AMoAdUnityPlugin.Register (
             sid:GetSid(),
-            bannerSize:AMoAdUnityPlugin.BannerSize.B320x50 /* 320dpi x 50dpi */,
             hAlign:AMoAdUnityPlugin.HorizontalAlign.Center,
             vAlign:AMoAdUnityPlugin.VerticalAlign.Bottom,
             adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
             rotateTrans:AMoAdUnityPlugin.RotateTransition.None,
             clickTrans:AMoAdUnityPlugin.ClickTransition.None,
-            imageName:"banner.gif"
+            imageName:"banner@2x.png"
         );
+        #elif UNITY_ANDROID
+        AMoAdUnityPlugin.Register (
+            sid:GetSid(),
+            hAlign:AMoAdUnityPlugin.HorizontalAlign.Center,
+            vAlign:AMoAdUnityPlugin.VerticalAlign.Bottom,
+            adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
+            androidRotateTrans:AMoAdUnityPlugin.AndroidRotateTransition.None,
+            androidClickTrans:AMoAdUnityPlugin.AndroidClickTransition.None,
+            imageName:"banner.png"
+        );
+        #endif
     }
     public void Unregister(){
         AMoAdUnityPlugin.Unregister (GetSid());

@@ -4,18 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class AMoAdUnityPlugin {
-	public const string VersionNo = "1.3.2";
-
-	/// <summary>
-	/// 広告サイズ
-	/// </summary>
-	public enum BannerSize {
-		B320x50 = 0,
-		B320x100 = 1,
-		B300x250 = 2,
-		B728x90 = 3,
-		B300x100 = 4,
-	}
+	public const string VersionNo = "1.4.0";
 
 	/// <summary>
 	/// 水平方向の広告表示位置
@@ -259,7 +248,6 @@ public class AMoAdUnityPlugin {
 	/// プラグインを登録する
 	/// </summary>
 	/// <param name="sid">sid</param>
-	/// <param name="bannerSize">広告サイズ</param>
 	/// <param name="horizontalAlign">水平方向の広告表示位置</param>
 	/// <param name="verticalAlign">垂直方向の広告表示位置</param>
 	/// <param name="adjustMode">広告サイズの調整</param>
@@ -271,7 +259,6 @@ public class AMoAdUnityPlugin {
 	/// <param name="timeoutMillis">タイムアウト時間（ミリ秒）を設定する：デフォルトは30,000ミリ秒</param>
 	public static void Register(
 		string sid,
-		BannerSize bannerSize,
 		HorizontalAlign hAlign,
 		VerticalAlign vAlign,
 		AdjustMode adjustMode = AdjustMode.Responsive,

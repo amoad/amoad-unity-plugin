@@ -20,7 +20,6 @@ extern "C" {
 #endif
 
   void amoad_show(const char *cSid,
-                     int bannerSize,
                      int hAlign,
                      int vAlign,
                      int adjustMode,
@@ -79,7 +78,6 @@ static AMoAdView *find_amoad_view(NSString *sid) {
 #pragma mark - Implements
 
 void amoad_show(const char *cSid,
-                   int bannerSize,
                    int hAlign,
                    int vAlign,
                    int adjustMode,

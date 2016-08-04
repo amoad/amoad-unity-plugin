@@ -13,7 +13,6 @@ public class DisplaySceneHandler : MonoBehaviour {
         #if UNITY_IOS
         AMoAdUnityPlugin.Register (
             sid:sid,
-            bannerSize:AMoAdUnityPlugin.BannerSize.B320x50 /* 320dpi x 50dpi */,
             hAlign:AMoAdUnityPlugin.HorizontalAlign.Center,
             vAlign:AMoAdUnityPlugin.VerticalAlign.Bottom,
             adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
@@ -24,12 +23,11 @@ public class DisplaySceneHandler : MonoBehaviour {
         #elif UNITY_ANDROID
         AMoAdUnityPlugin.Register (
             sid:sid,
-            bannerSize:AMoAdUnityPlugin.BannerSize.B320x50 /* 320dpi x 50dpi */,
             hAlign:AMoAdUnityPlugin.HorizontalAlign.Center,
             vAlign:AMoAdUnityPlugin.VerticalAlign.Bottom,
             adjustMode:AMoAdUnityPlugin.AdjustMode.Responsive,
-            rotateTrans:AMoAdUnityPlugin.RotateTransition.None,
-            clickTrans:AMoAdUnityPlugin.ClickTransition.None,
+            androidRotateTrans:AMoAdUnityPlugin.AndroidRotateTransition.None,
+            androidClickTrans:AMoAdUnityPlugin.AndroidClickTransition.None,
             imageName:"banner.png"
         );
         #endif

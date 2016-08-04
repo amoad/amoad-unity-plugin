@@ -76,7 +76,6 @@ public class AMoAdUnityPlugin {
 	[DllImport("__Internal")]
 	private static extern void amoad_show(
 		string sid,
-		BannerSize bannerSize,
 		HorizontalAlign hAlign,
 		VerticalAlign vAlign,
 		AdjustMode adjustMode,
@@ -150,7 +149,6 @@ public class AMoAdUnityPlugin {
 
 	class Plugin {
 		private string sid;
-		private BannerSize bannerSize;
 		private HorizontalAlign hAlign;
 		private VerticalAlign vAlign;
 		private int x;
@@ -165,7 +163,6 @@ public class AMoAdUnityPlugin {
 
 		public Plugin(
 			string sid,
-			BannerSize bannerSize,
 			HorizontalAlign hAlign,
 			VerticalAlign vAlign,
 			AdjustMode adjustMode = AdjustMode.Responsive,
@@ -180,7 +177,6 @@ public class AMoAdUnityPlugin {
 			)
 		{
 			this.sid = sid;
-			this.bannerSize = bannerSize;
 			this.hAlign = hAlign;
 			this.vAlign = vAlign;
 			this.adjustMode = adjustMode;
@@ -198,7 +194,6 @@ public class AMoAdUnityPlugin {
 			#if UNITY_IOS
 			amoad_show(
 				sid: this.sid,
-				bannerSize :this.bannerSize,
 				hAlign: this.hAlign,
 				vAlign: this.vAlign,
 				adjustMode: this.adjustMode,
@@ -212,7 +207,6 @@ public class AMoAdUnityPlugin {
 			#elif UNITY_ANDROID
 			AMoAdUnityPlugin.AndroidPlugin.CallStatic("show",
 				this.sid,
-				(int)this.bannerSize,
 				(int)this.hAlign,
 				(int)this.vAlign,
 				(int)this.adjustMode,
@@ -272,7 +266,7 @@ public class AMoAdUnityPlugin {
 		int timeoutMillis = 30*1000
 		)
 	{
-		Plugin plugin = new Plugin (sid, bannerSize, hAlign, vAlign, adjustMode, rotateTrans, clickTrans, imageName, x, y, androidRotateTrans, androidClickTrans, timeoutMillis);
+		Plugin plugin = new Plugin (sid, hAlign, vAlign, adjustMode, rotateTrans, clickTrans, imageName, x, y, androidRotateTrans, androidClickTrans, timeoutMillis);
 		AMoAdUnityPlugin.plugins [sid] = plugin;
 	}
 

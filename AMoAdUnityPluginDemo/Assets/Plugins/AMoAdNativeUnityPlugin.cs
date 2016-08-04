@@ -2,8 +2,6 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 
 public class AMoAdNativeUnityPlugin {
-	public const string VersionNo = "1.0.2";
-
 	#if UNITY_IOS
 	[DllImport("__Internal")]
 	private static extern void amoad_native_load(string sid, string tag, int x, int y, int width, int height);

@@ -4,7 +4,7 @@
 
 # AMoAd Unity Plugin ver 4.9.0
 
-- [ZIPをダウンロード](https://github.com/amoad/amoad-unity-plugin/archive/master.zip)
+- [ZIPをダウンロード](https://github.com/amoad/amoad-unity-plugin/archive/v4.9.zip)
 - [ドキュメント](https://github.com/amoad/amoad-unity-plugin/wiki)
 
 ## Demo

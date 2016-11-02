@@ -2,7 +2,7 @@
 <img width="172" height="61" src="http://www.amoad.com/images/logo.png">
 </div>
 
-# AMoAd Unity Plugin ver 4.10
+# AMoAd Unity Plugin ver 4.11
 
 - [ZIPをダウンロード](https://github.com/amoad/amoad-unity-plugin/archive/master.zip)
 - [ドキュメント](https://github.com/amoad/amoad-unity-plugin/wiki)

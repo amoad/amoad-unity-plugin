@@ -28,6 +28,10 @@
 Unity4.x or later
 > デモアプリはUnity5.3.1f1で動作確認ずみです。
 
+## デモアプリのビルド環境
+Android向けのビルドの場合はEclipse(ADT)環境で行ってください。
+> gradleは対応中です。
+
 ## その他
 - [AMoAd iOS SDK](https://github.com/amoad/amoad-ios-sdk)
 - [AMoAd Android SDK](https://github.com/amoad/amoad-android-sdk)
